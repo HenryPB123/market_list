@@ -29,13 +29,4 @@ Aplicación web sencilla para crear una lista de compras organizada por categor�
 3. Seleccionar una categoría y agregar productos.
 4. Administrar la lista (borrar un producto, una categoría o limpiar todo).
 
-## ✨ Mejoras futuras
-
-- Validaciones más claras en la UI.
-- Estilos más sofisticados (modo oscuro/claro).
-- Reordenar productos arrastrando.
-- Exportar lista en PDF o compartir por WhatsApp.
-
----
-
 👨‍💻 Creado por **Henry Peralta Briceño**
