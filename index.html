@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista del Mercado</title>
+  </head>
+  <body>
+    <header><h1>Lista de compras</h1></header>
+    <main>
+      <section class="categories" id="categories">
+        <form id="form_category">
+          <label for="input_category">Agregar categoría:</label>
+          <input
+            type="text"
+            class="input_category"
+            id="input_category"
+            placeholder="frutas, verduras, lacteos..."
+          />
+          <button class="add_cat" id="add_cat" type="button">Agregar</button>
+          <button class="del_all_cats" id="del_all_cats" type="button">
+            Borrar Categorias
+          </button>
+          <!-- <button class="close_cat" id="close_cat" type="button">X</button> -->
+        </form>
+        <div class="div_category" id="div_category"></div>
+        <button class="show_cats" id="show_cats" style="display: none">
+          Ocultar Categorías
+        </button>
+      </section>
+      <section class="products" id="products">
+        <h2>Agregar Productos</h2>
+        <form id="form_product">
+          <div class="create_product" id="create_product">
+            <div>
+              <label for="input_product">Nombre Producto</label>
+              <input
+                type="text"
+                class="input_product"
+                id="input_product"
+                placeholder="queso, pera, arroz..."
+              />
+            </div>
+            <div>
+              <label for="select_cats">Nombre Categoría</label>
+
+              <select class="select_cats" id="select_cats"></select>
+            </div>
+          </div>
+          <button id="add_product" type="button">Agregar a la lista</button>
+        </form>
+      </section>
+      <section class="list" id="list"></section>
+    </main>
+    <footer>App creada por HENRY PERALTA BRICEÑO</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
