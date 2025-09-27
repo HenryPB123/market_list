@@ -100,11 +100,20 @@ button:hover {
   align-items: center;
   justify-content: space-around;
 }
-
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+.categories :last-child {
+  /* width: 40%; */
+  align-self: center;
+}
 .show_cats {
+  display: flex;
   margin-top: 0.5rem;
   background: #2980b9;
   color: #fff;
+  text-align: center;
 }
 
 .div_container_cat {

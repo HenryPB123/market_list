@@ -69,7 +69,7 @@
     if (selectCategories) {
       selectCategories.innerHTML = "";
       const optionEmpty = document.createElement("option");
-      optionEmpty.textContent = "Categorías";
+      optionEmpty.textContent = "Sin categoría";
       selectCategories.appendChild(optionEmpty);
 
       for (let i = 0; i < state.categories.length; i++) {
