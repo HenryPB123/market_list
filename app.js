@@ -27,10 +27,18 @@
   //Listeners
   function listeners() {
     const buttonShowCategories = document.getElementById("show_cats");
+    const buttonDeleteCategories = document.getElementById("del_all_cats");
     if (buttonShowCategories) {
       buttonShowCategories.addEventListener("click", (e) => {
         e.preventDefault();
         state.display = !state.display;
+
+        if (buttonShowCategories.textContent === "Mostrar Categorías") {
+          console.log("textContent", buttonShowCategories.textContent);
+          buttonDeleteCategories.style.display = "block";
+        } else {
+          buttonDeleteCategories.style.display = "none";
+        }
 
         if (state.display === false) {
           buttonShowCategories.textContent = "Mostrar Categorías";
@@ -69,7 +77,7 @@
     if (selectCategories) {
       selectCategories.innerHTML = "";
       const optionEmpty = document.createElement("option");
-      optionEmpty.textContent = "Sin categoría";
+      optionEmpty.textContent = "Otros";
       selectCategories.appendChild(optionEmpty);
 
       for (let i = 0; i < state.categories.length; i++) {
@@ -170,8 +178,8 @@
             const divCheckButton = document.createElement("div");
             divCheckButton.className = "check_button";
 
-            const h5 = document.createElement("h5");
-            h5.textContent = capitalizeFirstLetter(
+            const h4 = document.createElement("span");
+            h4.textContent = capitalizeFirstLetter(
               state.listProducts[j].nameProduct
             );
 
@@ -184,9 +192,9 @@
               setItemsStorage("products", state.listProducts);
 
               if (checkbox.checked) {
-                h5.classList.add("bought");
+                h4.classList.add("bought");
               } else {
-                h5.classList.remove("bought");
+                h4.classList.remove("bought");
               }
             });
 
@@ -197,7 +205,7 @@
               deleteOneProduct(state.listProducts[j].nameProduct);
             });
 
-            divProduct.appendChild(h5);
+            divProduct.appendChild(h4);
             divCheckButton.appendChild(checkbox);
             divCheckButton.appendChild(buttonDeleteProduct);
             divProduct.appendChild(divCheckButton);

@@ -15,8 +15,11 @@ body {
 
 /* ===== HEADER ===== */
 header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 1rem;
 }
 
 header h1 {
@@ -46,6 +49,11 @@ form {
   gap: 0.8rem;
 }
 
+#form_category label {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  text-align: center;
+}
 label {
   font-weight: bold;
   font-size: 0.9rem;
@@ -91,7 +99,20 @@ button:hover {
 .del_all_cats,
 #del_all_products {
   background: #e74c3c;
+  width: 100%;
   color: #fff;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.products h2 {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  color: #2c3e50;
 }
 
 .div_category {
@@ -99,32 +120,39 @@ button:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
 }
 .categories {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
+
 .categories :last-child {
-  /* width: 40%; */
+  display: flex;
+  justify-content: space-between;
   align-self: center;
 }
+
 .show_cats {
   display: flex;
   margin-top: 0.5rem;
   background: #2980b9;
   color: #fff;
   text-align: center;
+  width: 100%;
 }
 
 .div_container_cat {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #ecf0f1;
   border-radius: 0.3rem;
   margin: 0.5rem;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 2rem;
   gap: 0.5rem;
+  width: 100%;
 }
 
 .div_container_cat button {
@@ -150,20 +178,35 @@ button:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 
 .create_product div {
+  background-color: #ecf0f1;
+  border-radius: 0.2rem;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0.2rem 1rem;
+
   gap: 1rem;
+}
+
+.create_product div label {
+  display: flex;
+  text-align: left;
+  /* background-color: #27ae60; */
 }
 
 .div_product_by_category {
   display: flex;
+  gap: 0.2rem;
   flex-direction: column;
-  /* margin: 0.1rem; */
+}
+
+.div_product_by_category h3 {
+  align-self: center;
 }
 
 .item_product {
@@ -175,6 +218,11 @@ button:hover {
   justify-content: space-between;
   padding: 0.3rem 0.5rem;
   border-radius: 0.2rem;
+}
+
+.item_product span {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .item_product button {
@@ -194,7 +242,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 
 /* ===== MENSAJES DE ERROR ===== */
@@ -257,6 +305,7 @@ footer {
 
 /* ===== LISTA DE PRODUCTOS ===== */
 .list h3 {
+  text-align: center;
   margin: 1rem 0 0.5rem;
   color: #2c3e50;
 }
@@ -286,7 +335,7 @@ footer {
   }
 
   header h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   form {
@@ -303,7 +352,7 @@ footer {
   .div_product > div {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.2rem;
   }
 }
 
@@ -313,7 +362,7 @@ footer {
   }
 
   header h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   section {
