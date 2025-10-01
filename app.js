@@ -98,9 +98,8 @@
       const nameProduct = inputProduct.value;
       const category = selectCat.value;
 
-      const exists = includeElement(
-        state.listProducts,
-        nameProduct.toLowerCase()
+      const exists = state.listProducts.some(
+        (p) => p.nameProduct.toLowerCase() === nameProduct.toLowerCase()
       );
 
       if (exists) {
