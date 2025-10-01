@@ -154,6 +154,10 @@ button:hover {
   gap: 0.5rem;
   width: 100%;
 }
+.div_container_cat span {
+  font-size: 1rem;
+  font-weight: 300;
+}
 
 .div_container_cat button {
   color: #e74c3c;
