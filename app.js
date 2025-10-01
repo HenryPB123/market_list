@@ -198,7 +198,7 @@
             });
 
             const buttonDeleteProduct = document.createElement("button");
-            buttonDeleteProduct.textContent = "X";
+            buttonDeleteProduct.innerHTML = "X";
             buttonDeleteProduct.id = state.listProducts[j].nameProduct;
             buttonDeleteProduct.addEventListener("click", () => {
               deleteOneProduct(state.listProducts[j].nameProduct);
@@ -330,7 +330,7 @@
       msg.textContent = error;
 
       const buttonError = document.createElement("button");
-      buttonError.textContent = "X";
+      buttonError.innerHTML = "X";
       buttonError.className = "close-error";
       buttonError.addEventListener("click", () => {
         state.error = false;
