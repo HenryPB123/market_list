@@ -133,7 +133,7 @@
     const divCategoryProduct = document.createElement("div");
 
     const titleListProduct = document.createElement("h3");
-    titleListProduct.textContent = "Lista de productos";
+    titleListProduct.textContent = "Lista de productos o pendientes";
 
     const buttonDeleteAllProducts = document.createElement("button");
     buttonDeleteAllProducts.textContent = "Borrar Lista";
